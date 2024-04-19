@@ -174,8 +174,84 @@ print(random_list)
 #6-1
 
 
+person: dict = {'first_name': 'Valerio', 'last_name': 'Rondoni', 'age': '19', 'city': 'Rome' }
+print(person['first_name'])
+print(person['last_name'])
+print(person['age'])
+print(person['city'])
 
 
 
+#6-2, 6-10
+fav_numbers: dict = {'Valerio': 16, 'Filippo': 2, 'Giulio': 7, 'Simone': 15, 'Marco': 99}
+print('Valerio:', fav_numbers['Valerio'])
+print('Filippo:', fav_numbers['Filippo'])
+print('Giulio:', fav_numbers['Giulio'])
+print('Simone:', fav_numbers['Simone'])
+print('Marco:', fav_numbers['Marco'])
+
+fav_numbers['Valerio'] = [16, 67]
+fav_numbers['Filippo'] = [2, 11]
+fav_numbers['Giulio'] = [7, 19]
+fav_numbers['Simone'] = [15, 5]
+fav_numbers['Marco'] = [99, 90]
+print('VAlerio:', fav_numbers['Valerio'][0], ',', fav_numbers['Valerio'][1])
+print('Filippo:', fav_numbers['Filippo'][0], ',', fav_numbers['Filippo'][1])
+print('Giulio:', fav_numbers['Giulio'][0], ',', fav_numbers['Giulio'][1])
+print('Simone:', fav_numbers['Simone'][0], ',', fav_numbers['Simone'][1])
+print('Marco:', fav_numbers['Marco'][0], ',', fav_numbers['Marco'][1])
+print()
 
 
+
+#6-3
+
+
+glossary: list = {'pop': 'scoppiare', 'insert': 'inserire', 'print': 'stampare', 'list': 'lista', 'dictionary': 'dizionario'}
+print(' pop',  glossary['pop'])
+print(' insert',  glossary['insert'])
+print(' print',  glossary['print'])
+print(' list', glossary['list'])
+print(' dictionary', glossary['dictionary'])
+print()
+
+
+
+#6-8
+
+
+pet1: dict = {'owner': 'Valerio', 'kind': 'dog'}
+pet2: dict = {'owner': 'Leonardo', 'kind': 'cat'}
+pet3: dict = {'owner': 'Marco', 'kind': 'rabbit'}
+pet4: dict = {'owner': 'Edoardo', 'kind': 'hourse'}
+pets: list = [pet1, pet2, pet3, pet4]
+print(pets[0]['owner'])
+print(pets[0]['kind'])
+print(pets[1]['owner'])
+print(pets[1]['kind'])
+print(pets[2]['owner'])
+print(pets[2]['kind'])
+print(pets[3]['owner'])
+print(pets[3]['kind'])
+print()
+
+
+
+#6-9
+
+
+favorite_places: dict = {'Marco': 'Napoli', 'Valerio': 'Roma', 'Leonardo': 'Milano'}
+print('Francesco: ', favorite_places['Marco'])
+print('Gianmarco: ', favorite_places['Valerio'])
+print('Gabriel: ', favorite_places['Leonardo'])
+print()
+
+
+
+#6-11, 6-12
+
+
+cities: dict = {'Rome': {'country': 'Italy', 'population': '3 million', 'fact': 'has more fountains than any other city on the planet.'}, 'Paris': {'country': 'France', 'population': '2 milion', 'fact': 'not it\'s original name.'}, 'Berlin': {'country': 'Germany', 'population': '3.6 milion', 'fact': 'is the greenest city in Europe.'}}
+print('Rome', 'is the capital city of', cities['Rome']['country'], 'and has almost', cities['Rome']['population'], 'residents, it also', cities['Rome']['fact'])
+print('Paris', 'is the capital city of', cities['Paris']['country'], ', has almost', cities['Paris']['population'], 'residents, it\'s also', cities['Paris']['fact'])
+print('Berlin', 'is the capital city of', cities['Berlin']['country'], ', has almost', cities['Berlin']['population'], 'residents and', cities['Berlin']['fact'])
