@@ -88,7 +88,7 @@ print(cube_comprehension[7:])'''
 
 #5-1
 
-x: int = 0
+'''x: int = 0
 while (x < 10):
     x += 1
     car: str = input('Scrivi una macchina : ')
@@ -100,8 +100,23 @@ while (x < 10):
         print(car == 'maserati')
     elif (car == 'bmw'):
         print("I predict the car is a bmw")
-        print(car == 'bmw')
+        print(car == 'bmw')'''
+
+#5-2
+
+
+'''x: int = 0
+while (x < 2):
+    x += 1
+    var1: str = input('scrivi qualcosa: ')
+    var2: str = input('scrivi qualcosa: ')
+    var1 = var1.lower()
+    if var1 == var2:
+        print('le variabili sono uguali')
+    elif var1 != var2:
+        print('le variabil sono diverse')'''
     
+
 
 
 
