@@ -10,7 +10,10 @@ best_pizza.append('Boscaiola')
 print(best_pizza)
 friend_pizzas.append('Marinara')
 print(friend_pizzas)
-print(f'My favorite pizzas are: {best_pizza}')
+for pizza1 in best_pizza:
+    print(f'My favorite pizzas are: {pizza1}')
+for pizza2 in friend_pizzas:
+    print(f"My friend favorite pizza are: {pizza2}")
 
 #4-2
 
