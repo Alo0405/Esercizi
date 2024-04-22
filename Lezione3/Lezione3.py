@@ -1,7 +1,7 @@
 #4-1, 4-11
 
 
-best_pizza: list = ['Salame Piccante', 'Fiori di zucca', 'Focaccia']
+'''best_pizza: list = ['Salame Piccante', 'Fiori di zucca', 'Focaccia']
 for output in best_pizza:
     print("I really love", output)
 print(f'My favorite pizza are:{best_pizza[0]}, {best_pizza[1]} and {best_pizza[2]}')
@@ -13,7 +13,7 @@ print(friend_pizzas)
 for pizza1 in best_pizza:
     print(f'My favorite pizzas are: {pizza1}')
 for pizza2 in friend_pizzas:
-    print(f"My friend favorite pizza are: {pizza2}")
+    print(f"My friend favorite pizza are: {pizza2}")'''
 
 #4-2
 
@@ -86,6 +86,22 @@ print(f'The last three items are {cube_comprehension[7]}, {cube_comprehension[8]
 print(cube_comprehension[7:])'''
 
 
+#5-1
+
+x: int = 0
+while (x < 10):
+    x += 1
+    car: str = input('Scrivi una macchina : ')
+    if car == 'subaru':
+        print("I predict the car is a subaru")
+        print(car == 'subaru')
+    elif (car == 'maserati'):
+        print("I predict the car is a maserati")
+        print(car == 'maserati')
+    elif (car == 'bmw'):
+        print("I predict the car is a bmw")
+        print(car == 'bmw')
+    
 
 
 
