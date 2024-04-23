@@ -139,7 +139,7 @@ if ((list[0] != 3) and (list[1] != 3)):
 #5-3, 5-4, 5-5
 
 
-x: int = 0
+'''x: int = 0
 while (x < 2):
     x += 1
     alien_color: str = input('scrivi un colore: ')
@@ -164,17 +164,87 @@ while (x < 3):
     elif (alien_color == 'yellow'):
         print('the player just earned 10 points')
     elif (alien_color == 'red'):
-        print('the player just earned 15 points')
+        print('the player just earned 15 points')'''
 
 
+#5-6
+
+
+'''x: int = 0
+while (x < 6):
+    x += 1
+age: int = int (input('scrivi un età: '))
+if age < 2:
+    print('the person is a baby.')
+elif age > 2 and age < 4:
+    print('the person is a toddler.')
+elif age > 4 and age < 13:
+    print('the person is a kid.')
+elif age > 13 and age < 20:
+    print('the person is a teenager.')    
+elif age > 20 and age < 65:
+    print('the person is an adult.')
+elif age > 65:
+    print('the person is a elder.')'''
+
+
+#5-7
+
+
+'''favorite_fruit: list = ['strawberry', 'peach', 'banana']
+for read in favorite_fruit:
+    if read == 'strawberry':
+        print('i really love strawberry')
+    elif read == 'peach':
+        print('i really love peach')
+    elif read == 'banana':
+        print('is in the list')'''
+
+
+#5-8, 5-9
+
+
+'''usernames: list = ['admin', 'francesco', 'emanuele', 'valerio', 'leonardo']
+for user in usernames:
+    if(user == 'admin'):
+        print('Hello admin, would you like to see a status report?')
+    else:
+        print('Hello admin, thank you for logging in again.')
+usernames = []
+if (usernames):
+    if (user == 'admin'):
+        print('Hello admin, thank you for logging in again.')
+    else:
+        print('Hello admin, would you like to see a status report?')
+else:
+    print('I need to find some users!')'''
+
+
+#5-10
+
+
+'''current_users: list = ['gabriele', 'francesco', 'emanuele', 'valerio', 'leonardo']
+new_users: list = ['simone', 'matteo', 'giovanni', 'valerio', 'leonardo']
+for read in new_users:
+    for read1 in current_users:
+        if (read == read1):
+            print('the username is taken. choose another one')
+        else:
+            None'''
+
+
+#5-11
+
+
+numbers: list = range(1, 10)
+for read in numbers:
+    if (read == 1):
+        print('1st')
+    elif (read == 2):
+        print('2nd')
+    elif (read == 3):
+        print('3rd')
+    else:
+        print(f'{read}th')
     
-
-
-
-
-
-
-
-
-
 
