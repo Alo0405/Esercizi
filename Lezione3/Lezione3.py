@@ -111,11 +111,68 @@ while (x < 2):
     var1: str = input('scrivi qualcosa: ')
     var2: str = input('scrivi qualcosa: ')
     var1 = var1.lower()
-    if var1 == var2:
-        print('le variabili sono uguali')
-    elif var1 != var2:
-        print('le variabil sono diverse')'''
+    print('le variabili sono uguali')
+    print((var1 == var2) and (var1 == var2))
+    print('le variabil sono diverse')
+    print((var1 != var2) and (var1 != var2))
+
+num1: str = input('scrivi un numero: ')
+num2: str = input('scrivi un numero: ')
+if num1 == num2:
+    print('I numeri sono uguali')
+elif num1 != num2:
+    print('I numeri sono diversi')
+if num1 < num2:
+    print('num2 è maggiore di num1')
+elif num1 > num2:
+    print('num1 è maggiore di num2')
+a: list = [1, 2]
+if ((list[0] != 3) and (list[1] != 3)):
+    print('Il 3 non è nella lista.')
+    print((list[0] != 3) and (list[1] != 3))
+    print('Il 3 è nella lista.')
+    print((list[0] == 3) and (list[1] == 3))'''
+
+
+
+
+#5-3, 5-4, 5-5
+
+
+x: int = 0
+while (x < 2):
+    x += 1
+    alien_color: str = input('scrivi un colore: ')
+    if (alien_color == 'green'):
+        print('the player just earned 5 points.')
+    elif (alien_color == 'red'):
+        print('the player do not earned 5 points')
+x: int = 0
+while (x < 2):
+    x +=  1
+    alien_color: str = input('scrivi un colore: ')
+    if (alien_color == 'green'):
+        print('the player just earned 5 points')
+    else:
+        print('the player just earned 10 points')
+x: int = 0
+while (x < 3):
+    x += 1
+    alien_color: str = input('scrivi un colore: ')
+    if (alien_color == 'green'):
+        print('the player just earned 5 points')
+    elif (alien_color == 'yellow'):
+        print('the player just earned 10 points')
+    elif (alien_color == 'red'):
+        print('the player just earned 15 points')
+
+
     
+
+
+
+
+
 
 
 
