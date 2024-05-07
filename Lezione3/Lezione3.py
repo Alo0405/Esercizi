@@ -246,5 +246,3 @@ for read in numbers:
         print('3rd')
     else:
         print(f'{read}th')
-    
-
