@@ -156,6 +156,7 @@ def bubblesort(numbers: list):
 start: int = time.time()
 numbers1 = bubblesort(numbers)
 print(numbers1)
+<<<<<<< HEAD
 print(time.time() - start)'''
 
 def to_hexadecimal(num):
@@ -185,3 +186,6 @@ def to_hexadecimal(num):
 
 
 
+=======
+print(time.time() - start)
+>>>>>>> e16d17a951debc261cfe8e84ccdfd191cb153d77
