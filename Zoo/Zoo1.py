@@ -39,7 +39,13 @@ class ZooKeeper:
                   print('l\'animale è nel recinto')
             else:
                   print('non c\'è spazio per l\'animale nel recinto')
-            
+      def remove_animal(self, animal: Animal, fence: Fence):
+            if animal in fence.animal:
+                  fence.animal.remove(animal)
+                  fence.area += (animal.height * animal.width)
+
+
+                  
 
 
 
