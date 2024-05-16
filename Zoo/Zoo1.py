@@ -1,7 +1,25 @@
 class Zoo:
-    def __init__(self, fence: list, zoo_keepers: list ) -> None:
+      def __init__(self, fence: list, zoo_keepers: list ) -> None:
             self.fence = fence
             self.zoo_keeper = zoo_keepers
+      def describe_zoo(self):
+            
+            print('\nGuardians:\n')
+            for zoo_keeper in self.zoo_keeper:
+                  
+                  print(f'Zookeeper(name={zoo_keeper.name}, surname={zoo_keeper.surname}, id={zoo_keeper.id})\n') 
+            
+            print('Fences:\n')
+            for fence in self.fence:
+                  
+                  print(f'Fence(area={fence.area}, temperature={fence.temperature}, habitat={fence.habitat})\n')
+                  
+                  print('with animals:\n')
+                  for animal in fence.animal:
+                        
+                        print(f'Animal(name={animal.name}, species={animal.species}, age={animal.age})\n')
+            print('#########################')
+            
 
 
 
@@ -19,7 +37,7 @@ class Animal:
 
 class Fence:
       def __init__(self, animal: list, area: float, temperature: float, habitat: str) -> None:
-            self.animal: animal
+            self.animal = animal
             self.area = area
             self.temperature = temperature
             self.habitat = habitat
@@ -43,7 +61,28 @@ class ZooKeeper:
             if animal in fence.animal:
                   fence.animal.remove(animal)
                   fence.area += (animal.height * animal.width)
+      def feed(self, animal: Animal):
+            if (animal.fence.area - (((animal.height * 0.02) * (animal.width * 0.02))) >=0):
+                  animal.health = animal.health *0.01
+                  animal.height = animal.height * 0.02
+                  animal.width = animal.width *0.02
+                  print('gli animali si stanno nutrendo')
+            else:
+                  print('non c\'è spazio per nutrire gli animali')
 
+      def clean(self, fence) -> float:
+            time: float = 0
+            area_occupied: float = 0
+            if (fence.area == 0):
+                  for i in fence.animal:
+                        time += (i.height * i.width)
+                  return time
+            else:
+                  for i in fence.animal:
+                        area_occupied += (i.height * i.width)
+                  time += (area_occupied / fence.area)
+                  return time
+                  
 
                   
 
@@ -54,5 +93,8 @@ class ZooKeeper:
 
 
 animal1: Animal = Animal('lion', 'feline', 7, 2.0, 1.0, 'savannah', 70)
-fence1: Fence = Fence([] , 100.0, 25.0, 'savannah')
-ZooKeeper1: ZooKeeper = ZooKeeper('')
+fence1: Fence = Fence([], 100.0, 25.0, 'savannah')
+ZooKeeper1: ZooKeeper = ZooKeeper('valerio', 'Rondoni', '1234')
+Zoo1: Zoo = Zoo([fence1], [ZooKeeper1])
+ZooKeeper1.add_animal(animal1, fence1)
+Zoo1.describe_zoo()
