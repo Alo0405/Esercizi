@@ -1,4 +1,4 @@
-#dichiaro variabile
+'''#dichiaro variabile
 nome_variabile: int = 10
 nome_variabile: float = 10.0
 'diffrenza tra Float e Double: Double può rappresentare numeri più grandi (64bit)'
@@ -111,9 +111,19 @@ key: str = 'persona100'
 if key in anagrafe:
     anagrafe[key].append(voto)
 
-    else:
+    else:'''
+#1
+def numbers()-> list:
+    num = []
+    for i in range(2000, 3001):
+        if i % 7 == 0 and i % 5 != 0:
+            num.append(i)
+    return num
+result = numbers()
+print(result)
 
-
+#2
+def fact_num()
 
 
 
