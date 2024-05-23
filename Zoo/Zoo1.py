@@ -92,9 +92,4 @@ class ZooKeeper:
 
 
 
-animal1: Animal = Animal('lion', 'feline', 7, 2.0, 1.0, 'savannah', 70)
-fence1: Fence = Fence([], 100.0, 25.0, 'savannah')
-ZooKeeper1: ZooKeeper = ZooKeeper('valerio', 'Rondoni', '1234')
-Zoo1: Zoo = Zoo([fence1], [ZooKeeper1])
-ZooKeeper1.add_animal(animal1, fence1)
-Zoo1.describe_zoo()
+

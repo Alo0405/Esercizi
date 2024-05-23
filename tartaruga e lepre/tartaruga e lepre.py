@@ -1,38 +1,82 @@
 import random
 import time
+def obst_bonus_check(position: int, obstacles: dict, bonus: dict) -> int:
 
-def ability_tortuga(ability: int, position_tortuga: int, weather: str):
+
+    if (position == 10):
+        position += bonus[10]
+        return position
+    elif (position == 25):
+        position += bonus[25]
+        return position   
+    elif (position == 50):
+        position += bonus[50]
+        return position    
+    if (position == 15):        
+        position -= obstacles[15]
+        if (position < 0):
+            position = 0
+        return position   
+    elif (position == 30):
+        position -= obstacles[30]
+        if (position < 0):
+            position = 0
+        return position   
+    elif (position == 45):
+        position -= obstacles[45]
+        if (position < 0):
+            position = 0
+        return position    
+    return position
+
+def ability_tortuga(ability: int, position_tortuga: int, weather: str, stamina: int):
     if (1<= ability <= 5):
-        position_tortuga += 3
+        if((stamina - 5) >= 0):
+            position_tortuga += 3
+        else: 
+            stamina += 10
     elif (6 <= ability <= 7):
-        position_tortuga - 6
-    elif (8 <= ability <=10):
-        position_tortuga += 1
+            if((stamina - 10) >= 0):
+                position_tortuga -= 6
+                if (position_tortuga < 0):
+                    position_tortuga == 0
+            else:
+                stamina += 10
     else:
-        position_tortuga += 1
+        if (stamina - 3):
+            position_tortuga += 1
     if(weather == 'pioggia'):
         position_tortuga -= 0
         if(position_tortuga < 0):
-            position_tortuga = 0
+            position_tortuga == 0
     return position_tortuga
 
         
-def ability_hare(ability: int, position_hare: int, weather: str):
+def ability_hare(ability: int, position_hare: int, weather: str, stamina: int):
     if (1 <= ability <= 2):
-        position_hare == 0
+        if((stamina + 10)):
+            position_hare == 0
+        else:
+            stamina = 100
+
     elif (3 <= ability <= 4):
-        position_hare += 9
+        if((stamina - 15) >=0):
+            position_hare += 9
+
     elif (ability == 5):
-        position_hare - 12
+        if ((stamina- 20) >= 0):
+            position_hare -= 12
+
     elif (6 <= ability <= 8):
-        position_hare += 1
+        if((stamina - 5)>=0):
+            position_hare += 1
+
     elif (9 <= ability <= 10):
-        position_hare - 2
+        if((stamina - 8)>= 0):
+            position_hare -= 2
     
-    else:
-        position_hare += 1
     if(weather == 'pioggia'):
-        position_hare -= 0
+        position_hare -= 2
         if(position_hare < 0):
             position_hare = 0
     return position_hare
@@ -43,6 +87,8 @@ position_tortuga: int = 0
 position_hare: int = 0
 tic = 0
 change_w: list = range(0, 1000000, 10)
+stamina_hare: int = 100
+stamina_tortuga: int = 100
 print('BANG !!!!!')
 print('AND THEY\'RE OFF !!!!!')
 
@@ -61,8 +107,8 @@ while (tic != 1000000):
     route[position_hare] = '_'
     ability_t: int = random.randint(1, 10)
     ability_h: int = random.randint(1, 10)
-    position_tortuga = ability_tortuga(ability_t, position_tortuga, weather)
-    position_hare = ability_hare(ability_h, position_hare, weather)
+    position_tortuga = ability_tortuga(ability_t, position_tortuga, weather, stamina_tortuga)
+    position_hare = ability_hare(ability_h, position_hare, weather, stamina_hare)
 
     if (position_tortuga >= 69):
         print('TORTOISE WINS! || VAY!!!')
