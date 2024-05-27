@@ -89,6 +89,8 @@ tic = 0
 change_w: list = range(0, 1000000, 10)
 stamina_hare: int = 100
 stamina_tortuga: int = 100
+obstacles: dict = {15: 3, 30: 5, 45: 7}
+bonus: dict = {10: 5, 25: 3, 50: 10}
 print('BANG !!!!!')
 print('AND THEY\'RE OFF !!!!!')
 
