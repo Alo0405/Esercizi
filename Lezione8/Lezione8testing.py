@@ -1,36 +1,3 @@
-#1
-import math
-
-def safe_sqrt(number: int):
-    if number >= 0:
-        return math.sqrt(number)
-    else:
-        raise Exception('il numero è negativo')
-
-#2
-class InvalidPasswordError(Exception):
-    'invalid password'
-
-def validate_password(password):
-    maiusc: int = 0
-    spec_char: int = 0
-    show_spec_char: str = '#@\'[]()+*!$£&?^'
-
-    for char in password:
-
-        if (char.isupper() == True):
-            maiusc += 1
-
-        if (char in show_spec_char):
-            spec_char += 1
-
-    if (len(password) >= 20) and (maiusc >= 3) and (spec_char >= 4):
-        print('password is valid')
-    else:
-        raise InvalidPasswordError
-
-#3
-
 def is_valid_parenthesis(s: str) -> bool:
     
     queue: list =[]
@@ -66,8 +33,10 @@ def is_valid_parenthesis(s: str) -> bool:
             return True   
     if (ptr == len(queue)):
             return True
+    
 
-############################################################
+#2
+
 
 class Queue:
     pass
@@ -85,27 +54,20 @@ class MyStack:
         return self.stack[-1]
     def empty(self) -> None:
         return len(self.stack) == 0
+    
+
+#3 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def merge(nums1, m, nums2, n):
+    while m < len(nums1):
+        nums1.pop()
+    while n < len(nums2):
+        nums2.pop()
+    if m == 0:
+        nums1.clear()
+    if n == 0:
+        nums2.clear()
+    nums1 =+ nums2
+    return nums1.sort()
 
